@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BassoCon v1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" sizes="192x192" href="./img/icons/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libs/webcomponents-lite.js"></script>
+  <script src="libs/keys.js"></script>
+  <script src="libs/wam-controller.js"></script>
+  <script src="obxd.js"></script>
+  <script src="libs/pressure.min.js"></script>
+  <script src="libs/interact.min.js"></script>
+</head>
+
+<body>
+    <!-- <canvas id="canvas"></canvas> -->
+    <p id="load" onclick="load()">LOAD</p>
+    <!-- <div id="root">
+      <div class="row" id="controls"></div>
+      <div class="seperator"></div>
+      <div id="keys">
+        <div class="row" id="key-row-0"></div>
+        <div class="row" id="key-row-1"></div>
+        <div class="row" id="key-row-2"></div>
+      </div>
+    </div> -->
+    <div>
+    <button style="width:80px; height:40px;" onclick="start()">Start</button>
+    <button style="width:80px; height:40px;" onclick="stop()">Stop</button>
+    <select style="width:80px; height:40px; background-color: brown;" id="banks" onchange="bankChange()">
+      <option value="factory.fxb">factory</option>
+      <option value="Designer/Breeze_Meat-n-Potatoes_Obxd-Bank.fxb">Breeze</option>
+      <option value="Designer/FMR - OB-Xa Patch Book.fxb">FMR</option>
+      <option value="Designer/Kujashi-OBXD-Bank.fxb">Kujashi</option>
+      <option value="Designer/OBXD - KVR Community Bank - Part 1.fxb">KVR Part 1</option>
+      <option value="Designer/OBXD - KVR Community Bank - Part 2.fxb">KVR Part 2</option>
+      <option value="Category/OBXD KVR Bank - Bass.fxb">Bass</option>
+      <option value="Category/OBXD KVR Bank - Brass + Synths.fxb">Brass + Synths</option>
+      <option value="Category/OBXD KVR Bank - Drums + Percussion + SFXs.fxb">Drums + Percussion + SFXs</option>
+      <option value="Category/OBXD KVR Bank - Keys + Bells + Plucked.fxb">Keys + Bells + Plucked</option>
+      <option value="Category/OBXD KVR Bank - Leads.fxb">Leads</option>
+      <option value="Category/OBXD KVR Bank - Pads + Strings + Vocalic.fxb">Pads + Strings + Vocalic</option>
+      <option value="Category/Unbenannt.fxb"></option>
+    </select>
+    <select style="width:80px; height:40px; background-color: cadetblue;" id="patches" onchange="patchChange()"></select>
+  </div>
+  <div>
+    <div id="notes"></div>
+  </div>
+  <div>
+    <div id="octaves"></div>
+  </div>
+    <div class="controller" id="controller" style="display: none;">
+      <!-- <div class="controller"> -->
+      <div id="container">
+        <div id="frontpanel"></div>
+        <div id="keys"></div>
+
+      </div>
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
